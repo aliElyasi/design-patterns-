@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using design_patterns.memento;
+using design_patterns.State;
 
 Console.WriteLine("Hello, World!");
 
@@ -16,4 +17,9 @@ Console.WriteLine("Hello, World!");
 
 //Console.WriteLine(editor.content);
 #endregion
+
+Canvas canvas = new Canvas(new SelectionTool());
+canvas.mouseDown();
+canvas.mouseUp();
+
 
