@@ -17,7 +17,10 @@ namespace design_patterns.memento
 
         public editorState? pop()
         {
-            return states.LastOrDefault();
+           var currentStrate= states.LastOrDefault();
+            states.Remove(currentStrate);
+
+            return currentStrate;
         }
     }
 }
