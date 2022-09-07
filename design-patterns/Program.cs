@@ -2,6 +2,7 @@
 using design_patterns.iterator;
 using design_patterns.memento;
 using design_patterns.State;
+using design_patterns.template;
 
 Console.WriteLine("Hello, World!");
 
@@ -25,19 +26,21 @@ Console.WriteLine("Hello, World!");
 
 
 
-BrowserHistory history = new BrowserHistory();
+//BrowserHistory history = new BrowserHistory();
 
-history.push("a");
-history.push("b");
-history.push("c");
+//history.push("a");
+//history.push("b");
+//history.push("c");
 
-var iterator = history.createIterator();
+//var iterator = history.createIterator();
 
-while (iterator.hasNext())
-{
-    Console.WriteLine(iterator.current());
+//while (iterator.hasNext())
+//{
+//    Console.WriteLine(iterator.current());
   
-    iterator.next();
-}
+//    iterator.next();
+//}
 
+design_patterns.template.Task task=new TransferMoney();
 
+task.excute();
