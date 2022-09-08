@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using design_patterns.iterator;
 using design_patterns.memento;
+using design_patterns.Observer;
 using design_patterns.State;
 using design_patterns.template;
 
@@ -37,10 +38,20 @@ Console.WriteLine("Hello, World!");
 //while (iterator.hasNext())
 //{
 //    Console.WriteLine(iterator.current());
-  
+
 //    iterator.next();
 //}
 
-design_patterns.template.Task task=new TransferMoney();
+//design_patterns.template.Task task=new TransferMoney();
 
-task.excute();
+//task.excute();
+
+var dataSource = new DataSource();
+var spreadSheet01 = new SpreadSheet(dataSource);
+var chart = new chart(dataSource);
+
+dataSource.Addobserver(spreadSheet01);
+dataSource.Addobserver(chart);
+
+dataSource.dataValue = 1;
+
